@@ -123,7 +123,7 @@
       <AssemblyReference>System.Linq.Expressions</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="EnviarPlanilhaEmail" sap:VirtualizedContainerService.HintSize="958.9999999999999,758" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="EnviarPlanilhaEmail" sap:VirtualizedContainerService.HintSize="1499,758" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="attachmentPath" />
     </Sequence.Variables>
@@ -132,28 +132,18 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:InvokeCode ContinueOnError="{x:Null}" Code="Dim csvPath As String = &quot;C:\Users\pealm\Downloads\RPA Project\Projeto OLX\CSV Files\PS4_Anuncios.csv&quot;&#xD;&#xA;Dim sb As New System.Text.StringBuilder()&#xD;&#xA;sb.AppendLine(&quot;Titulo,Preco,Link&quot;)&#xD;&#xA;For Each row As System.Data.DataRow In dtFiltrado.Rows&#xD;&#xA;    sb.AppendLine(&quot;&quot;&quot;&quot; &amp; row(&quot;Titulo&quot;).ToString().Replace(&quot;&quot;&quot;&quot;,&quot;'&quot;) &amp; &quot;&quot;&quot;,&quot;&quot;&quot; &amp; row(&quot;Preco&quot;).ToString().Replace(&quot;&quot;&quot;&quot;,&quot;'&quot;) &amp; &quot;&quot;&quot;,&quot;&quot;&quot; &amp; row(&quot;Link&quot;).ToString().Replace(&quot;&quot;&quot;&quot;,&quot;'&quot;) &amp; &quot;&quot;&quot;&quot;)&#xD;&#xA;Next&#xD;&#xA;System.IO.File.WriteAllText(csvPath, sb.ToString(), System.Text.Encoding.UTF8)&#xD;&#xA;attachmentPath = csvPath" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="450,197" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
+    <ui:InvokeCode ContinueOnError="{x:Null}" Code="Dim csvPath As String = &quot;C:\Users\pealm\Downloads\RPA Project\Projeto OLX\CSV Files\PS4_Anuncios.csv&quot;&#xA;Dim sb As New System.Text.StringBuilder()&#xA;sb.AppendLine(&quot;Titulo,Preco,Link&quot;)&#xA;For Each row As System.Data.DataRow In dtFiltrado.Rows&#xA;    sb.AppendLine(&quot;&quot;&quot;&quot; &amp; row(&quot;Titulo&quot;).ToString().Replace(&quot;&quot;&quot;&quot;,&quot;'&quot;) &amp; &quot;&quot;&quot;,&quot;&quot;&quot; &amp; row(&quot;Preco&quot;).ToString().Replace(&quot;&quot;&quot;&quot;,&quot;'&quot;) &amp; &quot;&quot;&quot;,&quot;&quot;&quot; &amp; row(&quot;Link&quot;).ToString().Replace(&quot;&quot;&quot;&quot;,&quot;'&quot;) &amp; &quot;&quot;&quot;&quot;)&#xA;Next&#xA;System.IO.File.WriteAllText(csvPath, sb.ToString(), System.Text.Encoding.UTF8)&#xA;attachmentPath = csvPath" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="450,197" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
       <ui:InvokeCode.Arguments>
-        <InArgument x:TypeArguments="sd:DataTable" x:Key="dtFiltrado">
-          <VisualBasicValue x:TypeArguments="sd:DataTable" ExpressionText="dtFiltrado" />
-        </InArgument>
-        <OutArgument x:TypeArguments="x:String" x:Key="attachmentPath">
-          <VisualBasicReference x:TypeArguments="x:String" ExpressionText="attachmentPath" />
-        </OutArgument>
+        <InArgument x:TypeArguments="sd:DataTable" x:Key="dtFiltrado">[dtFiltrado]</InArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="attachmentPath">[attachmentPath]</OutArgument>
       </ui:InvokeCode.Arguments>
     </ui:InvokeCode>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,175" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Arquivo Criado Com Sucesso em &quot; +  attachmentPath]" />
-    <ui:InvokeCode ContinueOnError="{x:Null}" Code="Dim smtp As New System.Net.Mail.SmtpClient(&quot;smtp.gmail.com&quot;, 587)&#xD;&#xA;smtp.EnableSsl = True&#xD;&#xA;smtp.Credentials = New System.Net.NetworkCredential(&quot;pe_almeida@id.uff.br&quot;, &quot;szxhvfiillocxfnl&quot;)&#xD;&#xA;&#xD;&#xA;Dim mail As New System.Net.Mail.MailMessage()&#xD;&#xA;mail.From = New System.Net.Mail.MailAddress(&quot;pe_almeida@id.uff.br&quot;)&#xD;&#xA;mail.To.Add(emailDestino)&#xD;&#xA;mail.Subject = &quot;PS4 - Anúncios OLX Atualizados&quot;&#xD;&#xA;mail.Body = &quot;Olá! Seguem abaixo o link e o anexo CSV com os anúncios filtrados.&quot; &amp; Environment.NewLine &amp; Environment.NewLine &amp; &quot;Link da planilha:&quot; &amp; Environment.NewLine &amp; &quot;https://docs.google.com/spreadsheets/d/&quot; &amp; sheetId&#xD;&#xA;mail.Attachments.Add(New System.Net.Mail.Attachment(attachmentPath))&#xD;&#xA;&#xD;&#xA;smtp.Send(mail)&#xD;&#xA;mail.Dispose()" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="450,197" sap2010:WorkflowViewState.IdRef="InvokeCode_2">
+    <ui:InvokeCode ContinueOnError="{x:Null}" Code="Dim smtp As New System.Net.Mail.SmtpClient(&quot;smtp.gmail.com&quot;, 587)&#xD;&#xA;smtp.EnableSsl = True&#xD;&#xA;smtp.Credentials = New System.Net.NetworkCredential(&quot;Seu Email&quot;, &quot;Sua Senha de App&quot;)&#xD;&#xA;&#xD;&#xA;Dim mail As New System.Net.Mail.MailMessage()&#xD;&#xA;mail.From = New System.Net.Mail.MailAddress(&quot;Seu Email&quot;)&#xD;&#xA;mail.To.Add(emailDestino)&#xD;&#xA;mail.Subject = &quot;PS4 - Anúncios OLX Atualizados&quot;&#xD;&#xA;mail.Body = &quot;Olá! Seguem abaixo o link e o anexo CSV com os anúncios filtrados.&quot; &amp; Environment.NewLine &amp; Environment.NewLine &amp; &quot;Link da planilha:&quot; &amp; Environment.NewLine &amp; &quot;https://docs.google.com/spreadsheets/d/&quot; &amp; sheetId&#xD;&#xA;mail.Attachments.Add(New System.Net.Mail.Attachment(attachmentPath))&#xD;&#xA;&#xD;&#xA;smtp.Send(mail)&#xD;&#xA;mail.Dispose()" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="450,197" sap2010:WorkflowViewState.IdRef="InvokeCode_2">
       <ui:InvokeCode.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="emailDestino">
-          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="emailDestino" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="sheetId">
-          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="sheetId" />
-        </InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="attachmentPath">
-          <VisualBasicValue x:TypeArguments="x:String" ExpressionText="attachmentPath" />
-        </InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="emailDestino">[emailDestino]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="sheetId">[sheetId]</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="attachmentPath">[attachmentPath]</InArgument>
       </ui:InvokeCode.Arguments>
     </ui:InvokeCode>
     <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="450,166" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[&quot;Email enviado&quot;]" />

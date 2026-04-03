@@ -99,7 +99,7 @@
       <AssemblyReference>Net4x.ValueTuple</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1494,722" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="1499,722" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" Name="dtAnuncios" />
       <Variable x:TypeArguments="sd:DataTable" Name="dtfiltrado">
@@ -130,14 +130,14 @@
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="EnviarDadosPlanilha - Invoke Workflow File (Workflow\EnviarDadosPlanilha.xaml)" sap:VirtualizedContainerService.HintSize="450,177" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="Workflow\EnviarDadosPlanilha.xaml">
       <ui:InvokeWorkflowFile.Arguments>
         <InArgument x:TypeArguments="sd:DataTable" x:Key="dtFiltrado">[dtfiltrado]</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="credentialsPath">C:\Users\pealm\Downloads\RPA Project\Projeto OLX\API_Keys\Google Sheets\olx-automation-491021-e01fe4c18e14.json</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="sheetId">1Si1_vJJw9zKl6PWXfGOFp63J0pDoht3m27cwrtSmcpM</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="credentialsPath">Caminho da Credencial</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="sheetId">Id da Planilha</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
     <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" DisplayName="EnviarEmail - Invoke Workflow File (Workflow\EnviarEmail.xaml)" sap:VirtualizedContainerService.HintSize="450,168" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_7" UnSafe="False" WorkflowFileName="Workflow\EnviarEmail.xaml">
       <ui:InvokeWorkflowFile.Arguments>
-        <InArgument x:TypeArguments="x:String" x:Key="emailDestino">pedro.almeida0511@hotmail.com</InArgument>
-        <InArgument x:TypeArguments="x:String" x:Key="sheetId">1Si1_vJJw9zKl6PWXfGOFp63J0pDoht3m27cwrtSmcpM</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="emailDestino">Email Destino</InArgument>
+        <InArgument x:TypeArguments="x:String" x:Key="sheetId">Id Planilha</InArgument>
         <InArgument x:TypeArguments="sd:DataTable" x:Key="dtFiltrado">[dtfiltrado]</InArgument>
       </ui:InvokeWorkflowFile.Arguments>
     </ui:InvokeWorkflowFile>
