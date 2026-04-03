@@ -1,0 +1,6 @@
+{
+  "Name": "OLX_Project",
+  "ProjectType": "Process",
+  "Description": "Web Scraping no site da OLX, onde há uma filtragem das 'X' primeiras páginas de um produto, dos mais recentes. Ocorre tratamento de dados e o envio dos mesmos em uma planilha por e-mail",
+  "MainFile": "Main.xaml"
+}

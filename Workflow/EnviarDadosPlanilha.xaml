@@ -1,0 +1,300 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="EnviarDadosPlanilha" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:njl="clr-namespace:Newtonsoft.Json.Linq;assembly=Newtonsoft.Json" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uwah="clr-namespace:UiPath.Web.Activities.Http;assembly=UiPath.Web.Activities" xmlns:uwahm="clr-namespace:UiPath.Web.Activities.Http.Models;assembly=UiPath.Web.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="dtFiltrado" Type="InArgument(sd:DataTable)" />
+    <x:Property Name="credentialsPath" Type="InArgument(x:String)" />
+    <x:Property Name="sheetId" Type="InArgument(x:String)" />
+  </x:Members>
+  <VisualBasic.Settings>
+    <x:Null />
+  </VisualBasic.Settings>
+  <sap2010:WorkflowViewState.IdRef>EnviarDadosPlanilha_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <sco:Collection x:TypeArguments="x:String">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Activities.Validation</x:String>
+      <x:String>System.Activities.XamlIntegration</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>Microsoft.VisualBasic.Activities</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Windows.Markup</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Web.Activities.Http.Models</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>System.Net</x:String>
+      <x:String>UiPath.Platform.ResourceHandling</x:String>
+      <x:String>UiPath.Web.Activities.Http</x:String>
+      <x:String>UiPath.Sdk.Activities</x:String>
+      <x:String>UiPath.Sdk.Activities.DependencyInjection.Contracts</x:String>
+      <x:String>UiPath.Sdk.Activities.DependencyInjection</x:String>
+      <x:String>Newtonsoft.Json.Linq</x:String>
+      <x:String>Newtonsoft.Json</x:String>
+      <x:String>System.Dynamic</x:String>
+      <x:String>System.Collections.Specialized</x:String>
+      <x:String>UiPath.GSuite.Activities.Docs.Enums</x:String>
+      <x:String>UiPath.GSuite.Activities.Models</x:String>
+      <x:String>UiPath.GSuite.Activities.Drive.Enums</x:String>
+      <x:String>UiPath.Shared.Activities.Utils</x:String>
+      <x:String>UiPath.GSuite.Drive.Models</x:String>
+      <x:String>UiPath.GSuite.Activities</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>UiPath.Shared.Activities.ConnectionService.Contracts</x:String>
+      <x:String>System.Linq.Expressions</x:String>
+      <x:String>UiPath.Web.Activities.JSON.Models</x:String>
+      <x:String>UiPath.Web.Activities</x:String>
+      <x:String>System.Numerics</x:String>
+    </sco:Collection>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <sco:Collection x:TypeArguments="AssemblyReference">
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Drawing.Common</AssemblyReference>
+      <AssemblyReference>System.Drawing.Primitives</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Net.Mail</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Reflection.DispatchProxy</AssemblyReference>
+      <AssemblyReference>System.Reflection.TypeExtensions</AssemblyReference>
+      <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.ServiceModel</AssemblyReference>
+      <AssemblyReference>System.Private.DataContractSerialization</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Formatters</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization.Primitives</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
+      <AssemblyReference>System.Net.Primitives</AssemblyReference>
+      <AssemblyReference>System.Net.HttpListener</AssemblyReference>
+      <AssemblyReference>System.Net.WebProxy</AssemblyReference>
+      <AssemblyReference>System.Net.NameResolution</AssemblyReference>
+      <AssemblyReference>System.Net.WebHeaderCollection</AssemblyReference>
+      <AssemblyReference>System.Net.WebClient</AssemblyReference>
+      <AssemblyReference>System.Net.Requests</AssemblyReference>
+      <AssemblyReference>System.Net.ServicePoint</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>Newtonsoft.Json</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
+      <AssemblyReference>System.Collections.Specialized</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>UiPath.GSuite</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Linq.Async</AssemblyReference>
+      <AssemblyReference>NPOI.Core</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>Studio.Generated.TypedDataTable4</AssemblyReference>
+      <AssemblyReference>Studio.Generated.TypedDataTable3</AssemblyReference>
+      <AssemblyReference>Studio.Generated.TypedDataTable2</AssemblyReference>
+      <AssemblyReference>Studio.Generated.TypedDataTable1</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
+      <AssemblyReference>Net4x.ValueTuple</AssemblyReference>
+      <AssemblyReference>Net4x.AsyncBridge</AssemblyReference>
+    </sco:Collection>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="EnviarDadosPlanilha" sap:VirtualizedContainerService.HintSize="1458,4707" sap2010:WorkflowViewState.IdRef="Sequence_1">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="formatBody" />
+      <Variable x:TypeArguments="x:String" Name="clearResponse" />
+      <Variable x:TypeArguments="x:String" Name="debugInfo" />
+      <Variable x:TypeArguments="uwahm:HttpResponseSummary" Name="httpResponse" />
+      <Variable x:TypeArguments="x:String" Name="credenciaisJson" />
+      <Variable x:TypeArguments="njl:JObject" Name="credObj" />
+      <Variable x:TypeArguments="x:String" Name="jwtToken" />
+      <Variable x:TypeArguments="x:String" Name="tokenResponse" />
+      <Variable x:TypeArguments="njl:JObject" Name="tokenObj" />
+      <Variable x:TypeArguments="x:String" Name="accessToken" />
+      <Variable x:TypeArguments="x:String" Name="jsonLinhas" />
+      <Variable x:TypeArguments="x:String" Name="jsonBody" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:InvokeCode Code="credenciaisJson = System.IO.File.ReadAllText(credentialsPath)" ContinueOnError="{x:Null}" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="452,197" sap2010:WorkflowViewState.IdRef="InvokeCode_1">
+      <ui:InvokeCode.Arguments>
+        <InArgument x:TypeArguments="x:String" x:Key="credentialsPath">[credentialsPath]</InArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="credenciaisJson">[credenciaisJson]</OutArgument>
+      </ui:InvokeCode.Arguments>
+    </ui:InvokeCode>
+    <ui:DeserializeJson x:TypeArguments="njl:JObject" JsonSample="{x:Null}" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="452,174" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_1" JsonObject="[credObj]" JsonString="[credenciaisJson]" Settings="{x:Null}" />
+    <ui:InvokeCode Code="Dim pemKey As String = credObj(&quot;private_key&quot;).ToString().Replace(&quot;-----BEGIN PRIVATE KEY-----&quot;,&quot;&quot;).Replace(&quot;-----END PRIVATE KEY-----&quot;,&quot;&quot;).Replace(Chr(10),&quot;&quot;).Replace(Chr(13),&quot;&quot;).Trim()&#xA;Dim clientEmail As String = credObj(&quot;client_email&quot;).ToString()&#xA;Dim now As Long = DateTimeOffset.UtcNow.ToUnixTimeSeconds()&#xA;&#xA;Dim headerJson As String = &quot;{&quot;&quot;alg&quot;&quot;:&quot;&quot;RS256&quot;&quot;,&quot;&quot;typ&quot;&quot;:&quot;&quot;JWT&quot;&quot;}&quot;&#xA;Dim payloadJson As String = &quot;{&quot;&quot;iss&quot;&quot;:&quot;&quot;&quot; &amp; clientEmail &amp; &quot;&quot;&quot;,&quot;&quot;scope&quot;&quot;:&quot;&quot;https://www.googleapis.com/auth/spreadsheets&quot;&quot;,&quot;&quot;aud&quot;&quot;:&quot;&quot;https://oauth2.googleapis.com/token&quot;&quot;,&quot;&quot;exp&quot;&quot;:&quot; &amp; (now+3600).ToString() &amp; &quot;,&quot;&quot;iat&quot;&quot;:&quot; &amp; now.ToString() &amp; &quot;}&quot;&#xA;&#xA;Dim headerEnc As String = Convert.ToBase64String(System.Text.Encoding.UTF8.GetBytes(headerJson)).TrimEnd(&quot;=&quot;c).Replace(&quot;+&quot;c,&quot;-&quot;c).Replace(&quot;/&quot;c,&quot;_&quot;c)&#xA;Dim payloadEnc As String = Convert.ToBase64String(System.Text.Encoding.UTF8.GetBytes(payloadJson)).TrimEnd(&quot;=&quot;c).Replace(&quot;+&quot;c,&quot;-&quot;c).Replace(&quot;/&quot;c,&quot;_&quot;c)&#xA;Dim toSign As String = headerEnc &amp; &quot;.&quot; &amp; payloadEnc&#xA;&#xA;Dim keyBytes() As Byte = Convert.FromBase64String(pemKey)&#xA;Dim asymKeyParam As Org.BouncyCastle.Crypto.AsymmetricKeyParameter = Org.BouncyCastle.Security.PrivateKeyFactory.CreateKey(keyBytes)&#xA;Dim rsaParams As Org.BouncyCastle.Crypto.Parameters.RsaPrivateCrtKeyParameters = CType(asymKeyParam, Org.BouncyCastle.Crypto.Parameters.RsaPrivateCrtKeyParameters)&#xA;Dim signer As New Org.BouncyCastle.Crypto.Signers.RsaDigestSigner(New Org.BouncyCastle.Crypto.Digests.Sha256Digest())&#xA;signer.Init(True, rsaParams)&#xA;Dim toSignBytes() As Byte = System.Text.Encoding.UTF8.GetBytes(toSign)&#xA;signer.BlockUpdate(toSignBytes, 0, toSignBytes.Length)&#xA;Dim sig As String = Convert.ToBase64String(signer.GenerateSignature()).TrimEnd(&quot;=&quot;c).Replace(&quot;+&quot;c,&quot;-&quot;c).Replace(&quot;/&quot;c,&quot;_&quot;c)&#xA;&#xA;jwtToken = toSign &amp; &quot;.&quot; &amp; sig" ContinueOnError="{x:Null}" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="452,197" sap2010:WorkflowViewState.IdRef="InvokeCode_2">
+      <ui:InvokeCode.Arguments>
+        <InArgument x:TypeArguments="njl:JObject" x:Key="credObj">[credObj]</InArgument>
+        <OutArgument x:TypeArguments="x:String" x:Key="jwtToken">[jwtToken]</OutArgument>
+      </ui:InvokeCode.Arguments>
+    </ui:InvokeCode>
+    <Assign DisplayName="Assign- jwtokdn" sap:VirtualizedContainerService.HintSize="452,175" sap2010:WorkflowViewState.IdRef="Assign_9">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[jwtToken]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[jwtToken]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="452,175" sap2010:WorkflowViewState.IdRef="LogMessage_3" Level="Info" Message="[jwtToken]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="452,175" sap2010:WorkflowViewState.IdRef="LogMessage_4" Level="Info" Message="[&quot;JWT length: &quot; &amp; jwtToken.Length.ToString()]" />
+    <uwah:NetHttpRequest AuthenticationType="None" BasicAuthPassword="{x:Null}" BasicAuthSecurePassword="{x:Null}" BasicAuthUsername="{x:Null}" BinaryPayload="{x:Null}" ClientCertPassword="{x:Null}" ClientCertPath="{x:Null}" ClientCertSecurePassword="{x:Null}" ContinueOnError="True" Cookies="{x:Null}" CustomNegotiatedAuthCredentials="{x:Null}" DisableSslVerification="False" DisplayName="HTTP Request" EnableCookies="True" FileOverwrite="Replace" FilePath="{x:Null}" FollowRedirects="True" FormData="[New Dictionary(Of String, String) From {{&quot;grant_type&quot;, &quot;urn:ietf:params:oauth:grant-type:jwt-bearer&quot;}, {&quot;assertion&quot;, jwtToken}}]" FormDataParts="[New List (Of FormDataPart) From _&#xA;{&#xA;&#x9;New FileFormDataPart(),&#xA;&#x9;New BinaryFormDataPart(),&#xA;&#x9;New TextFormDataPart()&#xA;}]" Headers="{x:Null}" sap:VirtualizedContainerService.HintSize="452,329" sap2010:WorkflowViewState.IdRef="NetHttpRequest_4" InitialDelay="500" LocalFiles="{x:Null}" MaxRedirects="3" MaxRetryAfterDelay="30000" Method="POST" Multiplier="2" OAuthToken="{x:Null}" OutputFileName="token_response.json" OutputFileTargetFolder="C:\Users\pealm\Downloads\RPA Project\Projeto OLX\Tokens" Parameters="{x:Null}" PathResource="{x:Null}" PreferRetryAfterValue="True" ProxyConfiguration="{x:Null}" ProxySetting="Custom" RequestBodyType="FormUrlEncoded" RequestUrl="https://oauth2.googleapis.com/token" ResourceFiles="{x:Null}" Result="{x:Null}" RetryCount="3" RetryPolicyType="Basic" RetryStatusCodes="[New List (Of System.Net.HttpStatusCode) From _&#xA;{&#xA;&#x9;System.Net.HttpStatusCode.RequestTimeout,&#xA;&#x9;System.Net.HttpStatusCode.TooManyRequests,&#xA;&#x9;System.Net.HttpStatusCode.InternalServerError,&#xA;&#x9;System.Net.HttpStatusCode.BadGateway,&#xA;&#x9;System.Net.HttpStatusCode.ServiceUnavailable,&#xA;&#x9;System.Net.HttpStatusCode.GatewayTimeout&#xA;}]" SaveRawRequestResponse="True" SaveResponseAsFile="True" TextPayload="{x:Null}" TextPayloadContentType="application/json" TextPayloadEncoding="UTF-8" TlsProtocol="Automatic" UseJitter="True" UseOsNegotiatedAuthCredentials="True">
+      <uwah:NetHttpRequest.TimeoutInMiliseconds>
+        <InArgument x:TypeArguments="s:Nullable(x:Int32)">
+          <Literal x:TypeArguments="s:Nullable(x:Int32)" Value="10000">
+            <Literal.Result>
+              <OutArgument x:TypeArguments="s:Nullable(x:Int32)" />
+            </Literal.Result>
+          </Literal>
+        </InArgument>
+      </uwah:NetHttpRequest.TimeoutInMiliseconds>
+    </uwah:NetHttpRequest>
+    <ui:InvokeCode Code="tokenResponse = System.IO.File.ReadAllText(&quot;C:\Users\pealm\Downloads\RPA Project\Projeto OLX\Tokens\token_response.json&quot;)" ContinueOnError="{x:Null}" DisplayName="Invoke Code" sap:VirtualizedContainerService.HintSize="452,197" sap2010:WorkflowViewState.IdRef="InvokeCode_5">
+      <ui:InvokeCode.Arguments>
+        <OutArgument x:TypeArguments="x:String" x:Key="tokenResponse">[tokenResponse]</OutArgument>
+      </ui:InvokeCode.Arguments>
+    </ui:InvokeCode>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="452,175" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Info" Message="[tokenResponse]" />
+    <ui:DeserializeJson x:TypeArguments="njl:JObject" JsonSample="{x:Null}" DisplayName="Deserialize JSON" sap:VirtualizedContainerService.HintSize="452,174" sap2010:WorkflowViewState.IdRef="DeserializeJson`1_2" JsonObject="[tokenObj]" JsonString="[tokenResponse]" Settings="{x:Null}" />
+    <Assign sap:VirtualizedContainerService.HintSize="452,175" sap2010:WorkflowViewState.IdRef="Assign_4">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[accessToken]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">[tokenObj("access_token").ToString()]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <Assign sap:VirtualizedContainerService.HintSize="452,175" sap2010:WorkflowViewState.IdRef="Assign_5">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[jsonLinhas]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">["[[""Titulo"",""Preco"",""Link""]"]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <ui:ForEach x:TypeArguments="sd:DataRow" CurrentIndex="{x:Null}" DisplayName="For Each currentDataRow" sap:VirtualizedContainerService.HintSize="452,357" sap2010:WorkflowViewState.IdRef="ForEach`1_2" MaxIterations="{x:Null}" Values="[dtFiltrado.Rows]">
+      <ui:ForEach.Body>
+        <ActivityAction x:TypeArguments="sd:DataRow">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="sd:DataRow" Name="currentDataRow" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="450,226" sap2010:WorkflowViewState.IdRef="Sequence_3">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <Assign sap:VirtualizedContainerService.HintSize="416,166" sap2010:WorkflowViewState.IdRef="Assign_6">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[jsonLinhas]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[jsonLinhas &amp; ",[""" &amp; currentDataRow("Titulo").ToString() &amp; """,""" &amp; currentDataRow("Preco").ToString() &amp; """,""" &amp; currentDataRow("Link").ToString() &amp; """]"]</InArgument>
+              </Assign.Value>
+            </Assign>
+          </Sequence>
+        </ActivityAction>
+      </ui:ForEach.Body>
+    </ui:ForEach>
+    <Assign sap:VirtualizedContainerService.HintSize="452,175" sap2010:WorkflowViewState.IdRef="Assign_7">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[jsonBody]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">["{""values"":" &amp; jsonLinhas &amp; "]}"]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <uwah:NetHttpRequest AuthenticationType="None" BasicAuthPassword="{x:Null}" BasicAuthSecurePassword="{x:Null}" BasicAuthUsername="{x:Null}" BinaryPayload="{x:Null}" ClientCertPassword="{x:Null}" ClientCertPath="{x:Null}" ClientCertSecurePassword="{x:Null}" ContinueOnError="True" Cookies="{x:Null}" CustomNegotiatedAuthCredentials="{x:Null}" DisableSslVerification="False" DisplayName="HTTP Request" EnableCookies="True" FileOverwrite="Replace" FilePath="{x:Null}" FollowRedirects="True" FormData="{x:Null}" FormDataParts="[New List (Of FormDataPart) From _&#xA;{&#xA;&#x9;New FileFormDataPart(),&#xA;&#x9;New BinaryFormDataPart(),&#xA;&#x9;New TextFormDataPart()&#xA;}]" Headers="[new System.Collections.Generic.Dictionary(Of System.String, System.String) From { { &quot;Authorization&quot;, &quot;Bearer &quot; &amp; accessToken } }]" sap:VirtualizedContainerService.HintSize="452,277" sap2010:WorkflowViewState.IdRef="NetHttpRequest_5" InitialDelay="500" LocalFiles="{x:Null}" MaxRedirects="3" MaxRetryAfterDelay="30000" Method="POST" Multiplier="2" OAuthToken="{x:Null}" OutputFileName="clear_response.json" OutputFileTargetFolder="C:\Users\pealm\Downloads\RPA Project\Projeto OLX\Tokens" Parameters="{x:Null}" PathResource="{x:Null}" PreferRetryAfterValue="True" ProxyConfiguration="{x:Null}" ProxySetting="Custom" RequestBodyType="None" RequestUrl="[&quot;https://sheets.googleapis.com/v4/spreadsheets/&quot; &amp; sheetId &amp; &quot;/values/P%C3%A1gina1!A1:Z1000:clear&quot;]" ResourceFiles="{x:Null}" Result="{x:Null}" RetryCount="3" RetryPolicyType="Basic" RetryStatusCodes="[New List (Of System.Net.HttpStatusCode) From _&#xA;{&#xA;&#x9;System.Net.HttpStatusCode.RequestTimeout,&#xA;&#x9;System.Net.HttpStatusCode.TooManyRequests,&#xA;&#x9;System.Net.HttpStatusCode.InternalServerError,&#xA;&#x9;System.Net.HttpStatusCode.BadGateway,&#xA;&#x9;System.Net.HttpStatusCode.ServiceUnavailable,&#xA;&#x9;System.Net.HttpStatusCode.GatewayTimeout&#xA;}]" SaveRawRequestResponse="False" SaveResponseAsFile="True" TextPayload="{x:Null}" TextPayloadContentType="application/json" TextPayloadEncoding="UTF-8" TlsProtocol="Automatic" UseJitter="True" UseOsNegotiatedAuthCredentials="True">
+      <uwah:NetHttpRequest.TimeoutInMiliseconds>
+        <InArgument x:TypeArguments="s:Nullable(x:Int32)">
+          <Literal x:TypeArguments="s:Nullable(x:Int32)" Value="10000">
+            <Literal.Result>
+              <OutArgument x:TypeArguments="s:Nullable(x:Int32)" />
+            </Literal.Result>
+          </Literal>
+        </InArgument>
+      </uwah:NetHttpRequest.TimeoutInMiliseconds>
+    </uwah:NetHttpRequest>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="452,175" sap2010:WorkflowViewState.IdRef="LogMessage_5" Level="Info" Message="[&quot;Clear Feito&quot;]" />
+    <uwah:NetHttpRequest AuthenticationType="None" BasicAuthPassword="{x:Null}" BasicAuthSecurePassword="{x:Null}" BasicAuthUsername="{x:Null}" BinaryPayload="{x:Null}" ClientCertPassword="{x:Null}" ClientCertPath="{x:Null}" ClientCertSecurePassword="{x:Null}" ContinueOnError="True" Cookies="{x:Null}" CustomNegotiatedAuthCredentials="{x:Null}" DisableSslVerification="False" DisplayName="HTTP Request" EnableCookies="True" FileOverwrite="Replace" FilePath="{x:Null}" FollowRedirects="True" FormData="{x:Null}" FormDataParts="[New List (Of FormDataPart) From _&#xA;{&#xA;&#x9;New FileFormDataPart(),&#xA;&#x9;New BinaryFormDataPart(),&#xA;&#x9;New TextFormDataPart()&#xA;}]" Headers="[new System.Collections.Generic.Dictionary(Of System.String, System.String) From { { &quot;Authorization&quot;, &quot;Bearer &quot; &amp; accessToken },{ &quot;Content-Type&quot;, &quot;application/json&quot; } }]" sap:VirtualizedContainerService.HintSize="452,433" sap2010:WorkflowViewState.IdRef="NetHttpRequest_6" InitialDelay="500" LocalFiles="{x:Null}" MaxRedirects="3" MaxRetryAfterDelay="30000" Method="PUT" Multiplier="2" OAuthToken="{x:Null}" OutputFileName="write_response.json" OutputFileTargetFolder="C:\Users\pealm\Downloads\RPA Project\Projeto OLX\Tokens" Parameters="{x:Null}" PathResource="{x:Null}" PreferRetryAfterValue="True" ProxyConfiguration="{x:Null}" ProxySetting="Custom" RequestBodyType="Text" RequestUrl="[&quot;https://sheets.googleapis.com/v4/spreadsheets/&quot; &amp; sheetId &amp; &quot;/values/P%C3%A1gina1!A1?valueInputOption=RAW&quot;]" ResourceFiles="{x:Null}" Result="{x:Null}" RetryCount="3" RetryPolicyType="Basic" RetryStatusCodes="[New List (Of System.Net.HttpStatusCode) From _&#xA;{&#xA;&#x9;System.Net.HttpStatusCode.RequestTimeout,&#xA;&#x9;System.Net.HttpStatusCode.TooManyRequests,&#xA;&#x9;System.Net.HttpStatusCode.InternalServerError,&#xA;&#x9;System.Net.HttpStatusCode.BadGateway,&#xA;&#x9;System.Net.HttpStatusCode.ServiceUnavailable,&#xA;&#x9;System.Net.HttpStatusCode.GatewayTimeout&#xA;}]" SaveRawRequestResponse="False" SaveResponseAsFile="True" TextPayload="[jsonBody]" TextPayloadContentType="application/json" TextPayloadEncoding="UTF-8" TlsProtocol="Automatic" UseJitter="True" UseOsNegotiatedAuthCredentials="True">
+      <uwah:NetHttpRequest.TimeoutInMiliseconds>
+        <InArgument x:TypeArguments="s:Nullable(x:Int32)">
+          <Literal x:TypeArguments="s:Nullable(x:Int32)" Value="10000">
+            <Literal.Result>
+              <OutArgument x:TypeArguments="s:Nullable(x:Int32)" />
+            </Literal.Result>
+          </Literal>
+        </InArgument>
+      </uwah:NetHttpRequest.TimeoutInMiliseconds>
+    </uwah:NetHttpRequest>
+    <Assign sap:VirtualizedContainerService.HintSize="452,175" sap2010:WorkflowViewState.IdRef="Assign_10">
+      <Assign.To>
+        <OutArgument x:TypeArguments="x:String">[formatBody]</OutArgument>
+      </Assign.To>
+      <Assign.Value>
+        <InArgument x:TypeArguments="x:String">["{""requests"":[{""repeatCell"":{""range"":{""sheetId"":0,""startRowIndex"":0,""endRowIndex"":1},""cell"":{""userEnteredFormat"":{""backgroundColor"":{""red"":0.2,""green"":0.4,""blue"":0.8},""textFormat"":{""bold"":true,""foregroundColor"":{""red"":1,""green"":1,""blue"":1}}}},""fields"":""userEnteredFormat(backgroundColor,textFormat)""}},{""autoResizeDimensions"":{""dimensions"":{""sheetId"":0,""dimension"":""COLUMNS"",""startIndex"":0,""endIndex"":3}}},{""addBanding"":{""bandedRange"":{""range"":{""sheetId"":0,""startRowIndex"":1,""endRowIndex"":1000,""startColumnIndex"":0,""endColumnIndex"":3},""rowProperties"":{""firstBandColor"":{""red"":1,""green"":1,""blue"":1},""secondBandColor"":{""red"":0.9,""green"":0.93,""blue"":0.98}}}}}]}"]</InArgument>
+      </Assign.Value>
+    </Assign>
+    <uwah:NetHttpRequest AuthenticationType="None" BasicAuthPassword="{x:Null}" BasicAuthSecurePassword="{x:Null}" BasicAuthUsername="{x:Null}" BinaryPayload="{x:Null}" ClientCertPassword="{x:Null}" ClientCertPath="{x:Null}" ClientCertSecurePassword="{x:Null}" ContinueOnError="True" Cookies="{x:Null}" CustomNegotiatedAuthCredentials="{x:Null}" DisableSslVerification="False" DisplayName="HTTP Request" EnableCookies="True" FileOverwrite="AutoRename" FilePath="{x:Null}" FollowRedirects="True" FormData="{x:Null}" FormDataParts="[New List (Of FormDataPart) From _&#xA;{&#xA;&#x9;New FileFormDataPart(),&#xA;&#x9;New BinaryFormDataPart(),&#xA;&#x9;New TextFormDataPart()&#xA;}]" Headers="[new System.Collections.Generic.Dictionary(Of System.String, System.String) From { { &quot;Authorization&quot;, &quot;Bearer &quot; &amp; accessToken },{ &quot;Content-Type&quot;, &quot;application/json&quot; } }]" sap:VirtualizedContainerService.HintSize="452,433" sap2010:WorkflowViewState.IdRef="NetHttpRequest_7" InitialDelay="500" LocalFiles="{x:Null}" MaxRedirects="3" MaxRetryAfterDelay="30000" Method="POST" Multiplier="2" OAuthToken="{x:Null}" OutputFileName="{x:Null}" OutputFileTargetFolder="{x:Null}" Parameters="{x:Null}" PathResource="{x:Null}" PreferRetryAfterValue="True" ProxyConfiguration="{x:Null}" ProxySetting="Custom" RequestBodyType="Text" RequestUrl="[&quot;https://sheets.googleapis.com/v4/spreadsheets/&quot; &amp; sheetId &amp; &quot;:batchUpdate&quot;]" ResourceFiles="{x:Null}" Result="{x:Null}" RetryCount="3" RetryPolicyType="Basic" RetryStatusCodes="[New List (Of System.Net.HttpStatusCode) From _&#xA;{&#xA;&#x9;System.Net.HttpStatusCode.RequestTimeout,&#xA;&#x9;System.Net.HttpStatusCode.TooManyRequests,&#xA;&#x9;System.Net.HttpStatusCode.InternalServerError,&#xA;&#x9;System.Net.HttpStatusCode.BadGateway,&#xA;&#x9;System.Net.HttpStatusCode.ServiceUnavailable,&#xA;&#x9;System.Net.HttpStatusCode.GatewayTimeout&#xA;}]" SaveRawRequestResponse="False" SaveResponseAsFile="False" TextPayload="[formatBody]" TextPayloadContentType="application/json" TextPayloadEncoding="UTF-8" TlsProtocol="Automatic" UseJitter="True" UseOsNegotiatedAuthCredentials="True">
+      <uwah:NetHttpRequest.TimeoutInMiliseconds>
+        <InArgument x:TypeArguments="s:Nullable(x:Int32)">
+          <Literal x:TypeArguments="s:Nullable(x:Int32)" Value="10000">
+            <Literal.Result>
+              <OutArgument x:TypeArguments="s:Nullable(x:Int32)" />
+            </Literal.Result>
+          </Literal>
+        </InArgument>
+      </uwah:NetHttpRequest.TimeoutInMiliseconds>
+    </uwah:NetHttpRequest>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="452,175" sap2010:WorkflowViewState.IdRef="LogMessage_6" Level="Info" Message="[&quot;Write Feito&quot;]" />
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="452,166" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Planilha atualizada com &quot; &amp; dtFiltrado.Rows.Count.ToString() &amp; &quot; registros!&quot;]" />
+  </Sequence>
+</Activity>

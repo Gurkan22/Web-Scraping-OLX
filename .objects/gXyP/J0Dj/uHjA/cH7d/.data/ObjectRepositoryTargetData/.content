@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="PYnxdqZb9UGMU8BsZdS7vQ" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="olx.com.br/games/consoles-de-video-game/estado-rj" DesignTimeRectangle="336, 353, 925, 6478" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl css-selector='body&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;div&amp;gt;div&amp;gt;main&amp;gt;div' idx='10' parentid='main-content' tag='DIV' /&gt;" Guid="6c496f3c-d987-402b-b5ce-d766f24b43f9" ScopeSelectorArgument="&lt;html app='msedge.exe' title='&amp;quot;playstation 4&amp;quot; - Consoles de Vídeo Game no Rio de Janeiro' /&gt;" SearchSteps="Selector" Version="V6" WaitForReadyArgument="Interactive">
+      <imageRef attrName="InformativeScreenshot" originalValue="772a7e632062e65075e92d08edce07bd.jpg" xmlns="">0nQpN13WZHkqsZD_K6niw7g</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">InjectJsScript</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,12 @@
+﻿{
+  "Name": "Edge playstation 4 - Consoles de Vídeo Game no Rio de Janeiro",
+  "Type": "App",
+  "Id": "gXyP-wOenUW9S3LZXhnbHA",
+  "Reference": "P3ggy3u_p06MrDJA-LFy_A/gXyP-wOenUW9S3LZXhnbHA",
+  "Created": "2026-03-21T23:05:07.6462647Z",
+  "Updated": "2026-03-21T23:05:07.6462647Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.1.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

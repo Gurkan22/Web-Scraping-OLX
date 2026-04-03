@@ -1,0 +1,14 @@
+﻿{
+  "Name": "Vendo PS4 novo, bem con…",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "hUwjkMX4Q0CmQof1tRO5SQ",
+  "Reference": "P3ggy3u_p06MrDJA-LFy_A/hUwjkMX4Q0CmQof1tRO5SQ",
+  "ParentRef": "P3ggy3u_p06MrDJA-LFy_A/uHjAHBR0rU-RpXTnWpTBjg",
+  "Created": "2026-03-22T02:33:20.8793968Z",
+  "Updated": "2026-03-22T02:33:20.8793968Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.1.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

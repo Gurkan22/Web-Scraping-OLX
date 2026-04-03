@@ -1,0 +1,131 @@
+{
+  "exportedBy": null,
+  "bundleHash": null,
+  "version": "1.0.0.0",
+  "jitAssemblyCompilerCommands": [
+    {
+      "providerName": "TypedDataTable",
+      "typedDataTableDto": {
+        "id": 1,
+        "idRef": "NExtractDataGeneric`1_1",
+        "hash": "NExtractDataGeneric`1_1|DataTable|XkedDoSpBRYjTz5uSsuWpDvD3wZl9uMJFxpKagd1nM",
+        "dataType": "System.Data.DataTable, System.Data.Common",
+        "columns": [
+          {
+            "columnName": "Column-0",
+            "dataType": "System.String, System.Private.CoreLib"
+          },
+          {
+            "columnName": "Account Name",
+            "dataType": "System.String, System.Private.CoreLib"
+          },
+          {
+            "columnName": "Country",
+            "dataType": "System.String, System.Private.CoreLib"
+          },
+          {
+            "columnName": "Opportunity Owner",
+            "dataType": "System.String, System.Private.CoreLib"
+          },
+          {
+            "columnName": "Stage",
+            "dataType": "System.String, System.Private.CoreLib"
+          },
+          {
+            "columnName": "Quantity",
+            "dataType": "System.String, System.Private.CoreLib"
+          },
+          {
+            "columnName": "Unit Sales Price",
+            "dataType": "System.String, System.Private.CoreLib"
+          },
+          {
+            "columnName": "Total Price",
+            "dataType": "System.String, System.Private.CoreLib"
+          },
+          {
+            "columnName": "List Price",
+            "dataType": "System.String, System.Private.CoreLib"
+          }
+        ]
+      },
+      "entityAssemblyKey": {
+        "name": "Studio.Generated.TypedDataTable1",
+        "hash": "NExtractDataGeneric`1_1|DataTable|0uXA1Ph1FaNCUqlaCKHSbRUqyJmRTEjTDjZ4kp0BDE",
+        "assemblyName": "Studio.Generated.TypedDataTable1"
+      }
+    },
+    {
+      "providerName": "TypedDataTable",
+      "typedDataTableDto": {
+        "id": 2,
+        "idRef": "NExtractDataGeneric`1_1",
+        "hash": "NExtractDataGeneric`1_1|DataTable|9jgQAVESsgnHFhLxMxxOXqkPqYOMz50h8FbB13jI",
+        "dataType": "System.Data.DataTable, System.Data.Common",
+        "columns": [
+          {
+            "columnName": "Titulo",
+            "dataType": "System.String, System.Private.CoreLib"
+          },
+          {
+            "columnName": "Link",
+            "dataType": "System.String, System.Private.CoreLib"
+          }
+        ]
+      },
+      "entityAssemblyKey": {
+        "name": "Studio.Generated.TypedDataTable2",
+        "hash": "NExtractDataGeneric`1_1|DataTable|96BgkVUM8nkSsD0QJm8ljVCjCsVPmRRjLfb2BA3agdo",
+        "assemblyName": "Studio.Generated.TypedDataTable2"
+      }
+    },
+    {
+      "providerName": "TypedDataTable",
+      "typedDataTableDto": {
+        "id": 3,
+        "idRef": "NExtractDataGeneric`1_1",
+        "hash": "NExtractDataGeneric`1_1|DataTable|9jgQAVESsgnHFhLxMxxOXqkPqYOMz50h8FbB13jI",
+        "dataType": "System.Data.DataTable, System.Data.Common",
+        "columns": [
+          {
+            "columnName": "Titulo",
+            "dataType": "System.String, System.Private.CoreLib"
+          },
+          {
+            "columnName": "Link",
+            "dataType": "System.String, System.Private.CoreLib"
+          }
+        ]
+      },
+      "entityAssemblyKey": {
+        "name": "Studio.Generated.TypedDataTable3",
+        "hash": "NExtractDataGeneric`1_1|DataTable|96BgkVUM8nkSsD0QJm8ljVCjCsVPmRRjLfb2BA3agdo",
+        "assemblyName": "Studio.Generated.TypedDataTable3"
+      }
+    },
+    {
+      "providerName": "TypedDataTable",
+      "typedDataTableDto": {
+        "id": 4,
+        "idRef": "NExtractDataGeneric`1_3",
+        "hash": "NExtractDataGeneric`1_3|DataTable|9jgQAVESsgnHFhLxMxxOXqkPqYOMz50h8FbB13jI",
+        "dataType": "System.Data.DataTable, System.Data.Common",
+        "columns": [
+          {
+            "columnName": "Titulo",
+            "dataType": "System.String, System.Private.CoreLib"
+          },
+          {
+            "columnName": "Link",
+            "dataType": "System.String, System.Private.CoreLib"
+          }
+        ]
+      },
+      "entityAssemblyKey": {
+        "name": "Studio.Generated.TypedDataTable4",
+        "hash": "NExtractDataGeneric`1_3|DataTable|96BgkVUM8nkSsD0QJm8ljVCjCsVPmRRjLfb2BA3agdo",
+        "assemblyName": "Studio.Generated.TypedDataTable4"
+      }
+    }
+  ]
+}

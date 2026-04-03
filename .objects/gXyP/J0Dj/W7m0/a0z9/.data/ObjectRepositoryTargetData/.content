@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="INHShN_aw0eZ-CaO855Csg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="olx.com.br/games/consoles-de-video-game/estado-rj" CVScreenId="8eda013e-7311-4e22-8d9f-59187b606e6f" CvType="AnyWordGroup" DesignTimeRectangle="573, 605, 76, 28" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;ctrl name='&amp;quot;playstation 4&amp;quot; - Consoles de Vídeo Game no Rio de Janeiro' role='document' /&gt;&lt;ctrl name='R$ 2.200' role='grouping' /&gt;" FuzzySelectorArgument="&lt;ctrl name='&amp;quot;playstation 4&amp;quot; - Consoles de Vídeo Game no Rio de Janeiro' role='document' matching:name='fuzzy' fuzzylevel:name='0.0' /&gt;&lt;ctrl role='grouping' automationid='' matching:automationid='fuzzy' fuzzylevel:automationid='0.0' /&gt;" Guid="f5eac488-1ee4-4ae3-ae96-751838068e2f" ScopeSelectorArgument="&lt;wnd app='msedge.exe' cls='Chrome_WidgetWin_1' title='&amp;quot;playstation 4&amp;quot; - Consoles de Vídeo Game no Rio de Janeiro - Pes*' /&gt;" SearchSteps="Selector, FuzzySelector, CV" SelectionStrategy="AA" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target DesignTimeRectangle="1465, 517, 444, 33" FuzzySelectorArgument="&lt;ctrl name='DevTools' role='document' matching:name='fuzzy' fuzzylevel:name='0.0' /&gt;&lt;ctrl name='Elementos' role='property page' matching:name='fuzzy' fuzzylevel:name='0.0' /&gt;&lt;ctrl name='elements' role='grouping' matching:name='fuzzy' fuzzylevel:name='0.0' /&gt;&lt;ctrl name='Explorador de árvores DOM' role='grouping' matching:name='fuzzy' fuzzylevel:name='0.0' /&gt;&lt;ctrl name='Página DOM' role='outline' matching:name='fuzzy' fuzzylevel:name='0.0' /&gt;&lt;ctrl name='&amp;lt;h3 class=​&amp;quot;typo-body-large olx-adcard__price font-semibold&amp;quot;&amp;gt; ​R*' role='outline item' fuzzylevel:name='0.0' /&gt;&lt;ctrl role='grouping' automationid='' matching:automationid='fuzzy' fuzzylevel:automationid='0.0' check:text='​R$ 1.400​​' /&gt;" Guid="d51d59b8-dc20-4449-bbb9-0a1be6668b5c" SearchSteps="FuzzySelector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="a75de0ad6628b5fbd97a3e79c6e36f12.jpg" xmlns="">0iBcbYyU2Pk2LeTYOhpKK8Q</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">GetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

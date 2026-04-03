@@ -1,0 +1,14 @@
+﻿{
+  "Name": "PS4 Pro 1Tera 2 control…",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "pcnWkot98UGKaOSTnmQ_QQ",
+  "Reference": "P3ggy3u_p06MrDJA-LFy_A/pcnWkot98UGKaOSTnmQ_QQ",
+  "ParentRef": "P3ggy3u_p06MrDJA-LFy_A/uHjAHBR0rU-RpXTnWpTBjg",
+  "Created": "2026-03-22T02:33:53.0826821Z",
+  "Updated": "2026-03-22T02:33:53.0826821Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.1.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

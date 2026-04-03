@@ -1,0 +1,14 @@
+﻿{
+  "Name": "R$ 1.700(1)",
+  "Type": "Element",
+  "TaxonomyType": "Label",
+  "Id": "V-Aa84al6UC3UD9Gf_QV1A",
+  "Reference": "P3ggy3u_p06MrDJA-LFy_A/V-Aa84al6UC3UD9Gf_QV1A",
+  "ParentRef": "P3ggy3u_p06MrDJA-LFy_A/W7m0UBAvPk6m25w57FCKNQ",
+  "Created": "2026-03-22T01:03:29.8646532Z",
+  "Updated": "2026-03-22T01:03:29.8646532Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.1.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

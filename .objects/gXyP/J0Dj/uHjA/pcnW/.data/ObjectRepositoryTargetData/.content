@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="S_k2SE1EbUmnWZpaR5-2cg" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="olx.com.br/games/consoles-de-video-game/estado-rj" CVScreenId="15a9bab5-9455-4541-86ee-f0b6d4c568a1" CvTextArea="337, 591, 215, 17" CvTextArgument="PS4 Pro 1Tera 2 controles" CvType="Text" DesignTimeRectangle="338, 587, 215, 27" ElementType="Text" ElementVisibilityArgument="Interactive" FullSelectorArgument="&lt;webctrl class='olx-adcard__link' parentid='main-content' tag='A' /&gt;" Guid="f2f4baba-3780-4e95-a6ad-372e17681b56" ScopeSelectorArgument="&lt;html app='msedge.exe' title='&amp;quot;playstation 4&amp;quot; - Consoles de Vídeo Game no Rio de Janeiro' /&gt;" SearchSteps="Selector, CV" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target DesignTimeRectangle="573, 587, 216, 54" ElementType="Text" FuzzySelectorArgument="&lt;webctrl aaname='Vendo PS4 novo, bem conservado! Funcionando perfeito. Quero comprar PS5. Chama! Com jogos' class='olx-adcard__link' parentid='main-content' tag='A' type='' matching:aaname='fuzzy' fuzzylevel:aaname='0.0' matching:class='fuzzy' fuzzylevel:class='0.0' matching:parentid='fuzzy' fuzzylevel:parentid='0.0' check:innerText='Vendo PS4 novo, bem conservado! Funcionando perfeito. Quero comprar PS5. Chama! Com jogos' /&gt;" Guid="9b07c299-1be2-42e4-afec-af7af92b7791" SearchSteps="FuzzySelector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="c016d362546d23a0eccf0d727fe3578e.jpg" xmlns="">0-RhKuVpmZUe6cyrZL0DGxA</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">GetAttributeGeneric</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

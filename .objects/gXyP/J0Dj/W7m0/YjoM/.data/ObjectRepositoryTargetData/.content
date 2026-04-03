@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="wIyECDsOiUCGle27QUWL6A" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="olx.com.br/games/consoles-de-video-game/estado-rj" CVScreenId="22ff72c5-ea08-46bc-8842-0abaff3cfdb0" CvType="AnyWordGroup" DesignTimeRectangle="572, 807, 77, 21" ElementType="Text" ElementVisibilityArgument="Interactive" Guid="78129f41-e3c3-4cbe-81f5-468956e945c3" ScopeSelectorArgument="&lt;html app='msedge.exe' title='&amp;quot;playstation 4&amp;quot; - Consoles de Vídeo Game no Rio de Janeiro' /&gt;" SearchSteps="CV" TargetType="ComputerVisionBased" Version="V6" WaitForReadyArgument="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target CVScreenId="22ff72c5-ea08-46bc-8842-0abaff3cfdb0" CvTextArea="807, 807, 77, 20" CvTextArgument="R$ 1.700" CvType="Text" DesignTimeRectangle="807, 807, 77, 21" ElementType="Text" Guid="8158476d-123b-4ea8-854b-3d19b845f0f2" SearchSteps="CV" TargetType="ComputerVisionBased" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="259f48034519b05549e95f5445f65302.jpg" xmlns="">0lklz3nWOw0u5ajGBw81tHw</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">GetText</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

@@ -1,0 +1,13 @@
+﻿{
+  "Name": "Edge playstation 4 - Consoles de Vídeo Game n(1)",
+  "Type": "Screen",
+  "Id": "W7m0UBAvPk6m25w57FCKNQ",
+  "Reference": "P3ggy3u_p06MrDJA-LFy_A/W7m0UBAvPk6m25w57FCKNQ",
+  "ParentRef": "P3ggy3u_p06MrDJA-LFy_A/J0Djns2AYkeI3nvUn-EfLg",
+  "Created": "2026-03-21T23:41:48.956232Z",
+  "Updated": "2026-03-21T23:41:48.956232Z",
+  "CreatedBy": [
+    "UiPath.UIAutomationCore, Version=26.1.0.0, Culture=neutral, PublicKeyToken=null",
+    "UiPath.Platform, Version=25.12.1.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
